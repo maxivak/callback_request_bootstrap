@@ -1,5 +1,6 @@
 en:
-  callback_form:
+  callback_request:
+    title: "Request a callback"
     description: "Enter your contact info and we will call you back"
     errors: "%{n}"
     messages:

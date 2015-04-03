@@ -1,5 +1,6 @@
 ru:
-  callback_form:
+  callback_request:
+    title: "Обратный звонок"
     description: "Оставьте вашу контактную информацию и мы вам перезвоним"
     errors: "%{n}"
     messages:

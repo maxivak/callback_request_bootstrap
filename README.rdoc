@@ -14,8 +14,9 @@ Gemfile:
 gem 'callback_request_bootstrap'
 ```
 
+```ruby
 bundle install
-
+```
 
 install using generator:
 ```ruby
@@ -23,7 +24,7 @@ rails g request_callback_bootstrap:install
 ```
 This will add the migrations.
 
-Run the migrations:
+Migrate the database:
 ```ruby
 rake db:migrate
 ```
@@ -36,8 +37,8 @@ Your application.js might be:
 //= require jquery
 //= require jquery_ujs
 
-//= require bootstrap  // or
-or if you want to include only modal javascript from bootstrap
+//= require bootstrap
+or if you want to include only javascript for modal
 //= require bootstrap/modal
 
 ```
@@ -53,14 +54,14 @@ end
 
 ```
 
-Link to show a form:
+Link to show form in modal:
 ```ruby
 <%=link_to_callback_modal "Request callback", :class=>'btn' %>
 
 ```
 This helper generates a link with css class 'callback_link'.
 
-or just add class 'callback_link' to your link:
+or add class 'callback_link' to your link:
 ```ruby
 =link_to 'Request callback', '#', :class=>'btn btn-primary callback_link'
 ```
@@ -79,8 +80,11 @@ This will add necessary scripts for modal.
 
 Use generator to copy views to your application.
 Edit views in /app/views/callback_request_bootstrap/.
+
 If you want to edit fields in the form, then edit view '_form.simple_form.html.erb'.
 
 
 === Localization ===
- 
+
+ Copy file config/locales/callback_request.en.yml to your application in config/locales/callback_request.LANG.yml.
+ Edit the file.
