@@ -30,7 +30,7 @@ bundle install
 
 install using generator:
 ```ruby
-rails g request_callback_bootstrap:install
+rails g callback_request_bootstrap:install
 ```
 This will add the migrations.
 
