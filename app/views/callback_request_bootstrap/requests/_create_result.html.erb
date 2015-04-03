@@ -1,0 +1,8 @@
+
+<% if flash[:notice] %>
+  <div class="alert alert-<%= @res ? 'success' : 'danger'%>" role="alert"><%= flash[:notice] %></div>
+<% end %>
+
+<% if @modal==1 %>
+  <button type="button" class="btn btn-default" data-dismiss="modal"><%=t('callback_form.close')%></button>
+<% end %>

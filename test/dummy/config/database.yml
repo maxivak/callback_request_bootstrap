@@ -1,4 +1,4 @@
-# MySQL.  Versions 5.0+ are recommended.
+﻿# MySQL.  Versions 5.0+ are recommended.
 #
 # Install the MYSQL driver
 #   gem install mysql2
@@ -19,7 +19,7 @@ default: &default
 
 development:
   <<: *default
-  database: dummy_development
+  database: my_rails_gem_callback_request_dev
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".

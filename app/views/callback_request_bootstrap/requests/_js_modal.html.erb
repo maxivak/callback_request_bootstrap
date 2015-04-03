@@ -1,0 +1,23 @@
+<%= render 'callback_request_bootstrap/requests/modal' %>
+
+<script>
+
+  $( document ).ready(function() {
+    $('.callback_link').click(function(event) {
+      $('#modCallback .divContFormCallback').html('');
+      $('#modCallback').modal('show');
+
+      $.get("<%=callback_request_bootstrap.new_request_path()%>", {modal: "1"},
+          function(data) {
+              $('#modCallback .divContFormCallback').html(data);
+
+              //callbackform_after_load();
+          }
+      );
+
+      event.preventDefault();
+    });
+
+  });
+
+</script>

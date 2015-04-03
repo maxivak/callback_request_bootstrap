@@ -1,4 +1,7 @@
-Rails.application.routes.draw do
+﻿Rails.application.routes.draw do
 
-  mount CallbackRequestBootstrap::Engine => "/callback_request_bootstrap"
+  mount CallbackRequestBootstrap::Engine => "/callback"
+
+  get 'debug/index'
+
 end

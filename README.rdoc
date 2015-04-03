@@ -1,3 +1,75 @@
-= CallbackRequestBootstrap
+= Callback Request with Bootstrap =
 
-This project rocks and uses MIT-LICENSE.
+Rails gem to show a form for callback request in modal mode.
+To be used with Bootstrap 3 and simple_form.
+
+
+Requests for phone callbacks are stored in database.
+
+
+== Installation ==
+
+Gemfile:
+```ruby
+gem 'callback_request_bootstrap'
+```
+
+bundle install
+
+
+install using generator:
+```ruby
+rails g request_callback_bootstrap:install
+```
+
+then
+```ruby
+rake db:migrate
+```
+It will add table 'requests' to the database.
+
+
+Your application should have jquery, jquery_ujs and bootstrap installed.
+Your application.js might be:
+```ruby
+//= require jquery
+//= require jquery_ujs
+
+//= require bootstrap  // or
+or
+//= require bootstrap/modal
+
+```
+
+
+Link to show a form:
+```ruby
+<%=link_to_callback_modal "Request callback", :class=>'btn' %>
+
+```
+This helper generates a link with css class 'callback_link'.
+
+or just add class 'callback_link' to your link:
+```ruby
+=link_to 'Request callback', '#', :class=>'btn btn-primary callback_link'
+```
+
+include on page (usually at the end of the page where you place the link):
+```ruby
+<%= render 'callback_request_bootstrap/requests/js_modal'%>
+```
+This will add necessary scripts for modal.
+
+
+
+== Customization ==
+
+=== Form ===
+
+Use generator to copy views to your application.
+Edit views in /app/views/callback_request_bootstrap/.
+If you want to edit fields in the form, then edit view '_form.simple_form.html.erb'.
+
+
+=== Localization ===
+ 

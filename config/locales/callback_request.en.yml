@@ -1,0 +1,15 @@
+en:
+  callback_form:
+    description: "Enter your contact info and we will call you back"
+    errors: "%{n}"
+    messages:
+      success: "Your request was sent"
+      error: "Unexpected error occurred"
+    errors:
+      fields_not_filled: "Mandatory fields not filled"
+    fields:
+      name: 'Name'
+      phone: 'Phone'
+      notes: 'Notes'
+    submit: 'Send request'
+    close: 'Close'
