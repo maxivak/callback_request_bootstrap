@@ -10,9 +10,9 @@ Requests for phone callbacks are stored in database.
 
 ## Dependencies
 
-jQuery
-bootstrap 3 (gem boostrap-sass)
-form (gem simple_form)
+* jQuery (jquery, jquery_ujs). use gem jquery-rails
+* bootstrap 3 - gem boostrap-sass
+* form - gem simple_form
 
 
 # Installation
