@@ -1,17 +1,27 @@
-= Callback Request with Bootstrap =
+Callback Request with Bootstrap 3
+=================================
 
-Rails gem to show a form for callback request in modal mode.
+Rails gem to show a form for callback request in modal.
 To be used with Bootstrap 3 and simple_form.
 
 
 Requests for phone callbacks are stored in database.
 
 
-== Installation ==
+## Dependencies
+jQuery
+bootstrap 3 (gem boostrap-sass)
+form (gem simple_form)
+
+
+# Installation
+
 
 Gemfile:
 ```ruby
 gem 'callback_request_bootstrap'
+
+gem 'simple_form'
 ```
 
 ```ruby
@@ -73,9 +83,9 @@ include on page (usually at the end of the page where you place the link):
 This will add necessary scripts for modal.
 
 
-= Options =
+# Options
 
-== Autoclose ==
+## Autoclose
 To close modal after a request is setn, use option 'autoclose' for a link:
 ```ruby
 <%=link_to "Show modal with autoclose", '#', :class=>'btn btn-default callback_link', :data=>{'autoclose'=>5} %>
@@ -84,9 +94,9 @@ This will close modal in 5 seconds.
 
 
 
-== Customization ==
+# Customization
 
-=== Form ===
+## Form
 
 Use generator to copy views to your application.
 Edit views in /app/views/callback_request_bootstrap/.
@@ -94,7 +104,7 @@ Edit views in /app/views/callback_request_bootstrap/.
 If you want to edit fields in the form, then edit view '_form.simple_form.html.erb'.
 
 
-=== Localization ===
+## Localization
 
  Copy file config/locales/callback_request.en.yml to your application in config/locales/callback_request.LANG.yml.
  Edit the file.
