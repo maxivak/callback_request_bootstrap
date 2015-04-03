@@ -21,26 +21,37 @@ install using generator:
 ```ruby
 rails g request_callback_bootstrap:install
 ```
+This will add the migrations.
 
-then
+Run the migrations:
 ```ruby
 rake db:migrate
 ```
 It will add table 'requests' to the database.
 
 
-Your application should have jquery, jquery_ujs and bootstrap installed.
+Your application should have jquery, jquery_ujs and bootstrap.js installed.
 Your application.js might be:
 ```ruby
 //= require jquery
 //= require jquery_ujs
 
 //= require bootstrap  // or
-or
+or if you want to include only modal javascript from bootstrap
 //= require bootstrap/modal
 
 ```
 
+mount engine in config/routes.rb:
+```ruby
+Rails.application.routes.draw do
+
+  mount CallbackRequestBootstrap::Engine => "/callback"
+
+  ..
+end
+
+```
 
 Link to show a form:
 ```ruby
