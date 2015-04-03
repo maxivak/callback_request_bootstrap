@@ -1,3 +1,7 @@
 $('#div_callback_request').html("<%= j (render 'callback_request_bootstrap/requests/create_result') %>");
 
+<% if @autoclose > 0 %>
+  setTimeout(function(){$('#modCallback').modal('hide');}, <%=@autoclose*1000%>);
+<% end %>
+
 

@@ -5,6 +5,7 @@
 
 <%= simple_form_for @request, remote: true, html: {class: "form-horizontal", role: "form"} do |f| %>
   <%= hidden_field_tag :modal, @modal %>
+  <%= hidden_field_tag :autoclose, @autoclose %>
 
 
   <% if @request.errors.any? %>

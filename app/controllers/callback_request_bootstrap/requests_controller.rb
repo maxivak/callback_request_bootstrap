@@ -2,20 +2,14 @@ require_dependency "callback_request_bootstrap/application_controller"
 
 module CallbackRequestBootstrap
   class RequestsController < ApplicationController
-    before_action :set_request, only: [:show, :edit, :update, :destroy]
+    before_action :set_request, only: [:edit, :update, :destroy]
     before_action :set_modal, only: [:new, :create, :create_result]
-
-    # GET /requests
-    def index
-      @requests = Request.all
-    end
-
-    # GET /requests/1
-    def show
-    end
 
     # GET /requests/new
     def new
+      @autoclose = (params[:autoclose] || 0).to_i
+
+      #
       @request = Request.new
 
       if @modal==1
@@ -30,8 +24,11 @@ module CallbackRequestBootstrap
 
     # POST /requests
     def create
+      @autoclose = (params[:autoclose] || 0).to_i
+
       @request = Request.new(request_params)
       @res = @request.save
+
 
       #@res = false # debug
 
@@ -83,15 +80,14 @@ module CallbackRequestBootstrap
     end
 
     private
-      # Use callbacks to share common setup or constraints between actions.
-      def set_request
-        @request = Request.find(params[:id])
-      end
 
-      # Only allow a trusted parameter "white list" through.
-      def request_params
-        params.require(:request).permit(:name, :email, :phone, :notes)
-      end
+    def set_request
+      @request = Request.find(params[:id])
+    end
+
+    def request_params
+      params.require(:request).permit(:name, :email, :phone, :notes)
+    end
 
     def set_modal
       @modal = (params[:modal] || 0).to_i rescue 0

@@ -7,7 +7,10 @@
       $('#modCallback .divContFormCallback').html('');
       $('#modCallback').modal('show');
 
-      $.get("<%=callback_request_bootstrap.new_request_path()%>", {modal: "1"},
+      var v = $(this).attr('data-autoclose');
+      var autoclose = v ? v : 0;
+
+      $.get("<%=callback_request_bootstrap.new_request_path()%>", {modal: "1", autoclose: autoclose},
           function(data) {
               $('#modCallback .divContFormCallback').html(data);
 

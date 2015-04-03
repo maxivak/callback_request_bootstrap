@@ -56,7 +56,7 @@ end
 
 Link to show form in modal:
 ```ruby
-<%=link_to_callback_modal "Request callback", :class=>'btn' %>
+<%=link_to_callback_modal "Request callback", '#', :class=>'btn' %>
 
 ```
 This helper generates a link with css class 'callback_link'.
