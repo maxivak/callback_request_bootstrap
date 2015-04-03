@@ -1,8 +1,11 @@
 <div id='wrap'>
   <div class='container'>
 
+<br><br>
 
 <%=link_to_callback_modal "Show modal", '#', :class=>'btn btn-primary' %>
+
+    <br><br>
     <br>
     Autoclose in 5 sec:<br>
     <%=link_to "Show modal with autoclose", '#', :class=>'btn btn-default callback_link', :data=>{'autoclose'=>5} %>
