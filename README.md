@@ -9,13 +9,13 @@ Requests for phone callbacks are stored in database.
 
 
 ## Dependencies
+
 jQuery
 bootstrap 3 (gem boostrap-sass)
 form (gem simple_form)
 
 
 # Installation
-
 
 Gemfile:
 ```ruby
