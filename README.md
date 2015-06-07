@@ -114,6 +114,8 @@ If you want to edit fields in the form, then edit view '_form.simple_form.html.e
 
 ### Callback after a new request created
 
+
+```ruby
 # config/initializers/callback_request.rb
 
 module CallbackRequestPatch
@@ -137,3 +139,5 @@ module CallbackRequestPatch
 end
 
 CallbackRequestBootstrap::Request.send(:include, CallbackRequestPatch)
+
+```
