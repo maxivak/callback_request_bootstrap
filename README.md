@@ -108,3 +108,32 @@ If you want to edit fields in the form, then edit view '_form.simple_form.html.e
 
  Copy file config/locales/callback_request.en.yml to your application in config/locales/callback_request.LANG.yml.
  Edit the file.
+
+
+## Callbacks
+
+### Callback after a new request created
+
+# config/initializers/callback_request.rb
+
+module CallbackRequestPatch
+  extend ActiveSupport::Concern
+
+  included do
+    after_create :_my_after_create
+
+  end
+
+
+  def _my_after_create
+    # your code
+    
+    logger.debug "callback request created"
+    
+    
+
+  end
+
+end
+
+CallbackRequestBootstrap::Request.send(:include, CallbackRequestPatch)
