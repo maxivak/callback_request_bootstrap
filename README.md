@@ -86,7 +86,7 @@ This will add necessary scripts for modal.
 # Options
 
 ## Autoclose
-To close modal after a request is setn, use option 'autoclose' for a link:
+To close modal after a request is sent, use option 'autoclose' for a link:
 ```ruby
 <%=link_to "Show modal with autoclose", '#', :class=>'btn btn-default callback_link', :data=>{'autoclose'=>5} %>
 ```
