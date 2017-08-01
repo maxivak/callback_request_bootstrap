@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = CallbackRequestBootstrap::VERSION
   s.authors     = ["Max Ivak"]
   s.email       = ["maxivak@gmail.com"]
-  s.homepage    = "http://maxivak.com"
+  s.homepage    = "https://github.com/maxivak/callback_request_bootstrap"
   s.summary     = "show a form for callback request in modal"
   s.description = "Rails gem to show a form for callback request in modal. To be used with Bootstrap 3 and simple_form."
   s.license     = "MIT"
