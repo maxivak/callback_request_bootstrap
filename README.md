@@ -2,7 +2,9 @@ Callback Request with Bootstrap 3
 =================================
 
 Rails gem to show a form for callback request in modal.
-To be used with Bootstrap 3 and simple_form.
+To be used with Bootstrap 4 and simple_form.
+
+For Bootstrap 3 - see branch 'bootstrap3'.
 
 
 Requests for phone callbacks are stored in database.
@@ -11,7 +13,7 @@ Requests for phone callbacks are stored in database.
 ## Dependencies
 
 * jQuery (jquery, jquery_ujs). use gem jquery-rails
-* bootstrap 3 - gem boostrap-sass
+* bootstrap 4 - gem 'bootstrap' (https://github.com/twbs/bootstrap-rubygem)
 * form - gem simple_form
 
 
@@ -47,9 +49,9 @@ Your application.js might be:
 //= require jquery
 //= require jquery_ujs
 
-//= require bootstrap
-or if you want to include only javascript for modal
-//= require bootstrap/modal
+//= require popper
+//= require bootstrap-sprockets
+
 
 ```
 

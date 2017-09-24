@@ -24,16 +24,14 @@ gem 'jquery-ui-rails'
 
 gem 'font-awesome-rails', '4.3.0'
 
-gem 'bootstrap-sass'
-gem 'compass-rails'
+gem 'bootstrap', '~> 4.0.0.beta'
+
+
+#gem 'bootstrap-sass'
+#gem 'compass-rails'
 
 
 group :assets do
-    #gem 'sass-rails'
-    #gem 'coffee-rails', '~> 3.2.2'
-    #gem 'uglifier', '>= 1.2.4'
-    #gem 'jquery-rails'
-    #gem 'bootstrap-sass'
 
 end
 

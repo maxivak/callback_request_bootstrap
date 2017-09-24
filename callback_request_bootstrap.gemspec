@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ["maxivak@gmail.com"]
   s.homepage    = "https://github.com/maxivak/callback_request_bootstrap"
   s.summary     = "show a form for callback request in modal"
-  s.description = "Rails gem to show a form for callback request in modal. To be used with Bootstrap 3 and simple_form."
+  s.description = "Rails gem to show a form for callback request in modal. To be used with Bootstrap 4 and simple_form."
   s.license     = "MIT"
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
   s.test_files = Dir["test/**/*"]
