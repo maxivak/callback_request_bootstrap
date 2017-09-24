@@ -1,4 +1,4 @@
-Callback Request with Bootstrap 3
+Callback Request with Bootstrap 4
 =================================
 
 Rails gem to show a form for callback request in modal.
